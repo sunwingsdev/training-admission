@@ -10,8 +10,8 @@ const PopularCourse = () => {
           skills. The knowledge, experience, and expertise gained through the
           program will ensure your desired job in the global market. From the
           list below you can enroll to any online or offline courses at any
-          time. 
-        </p>
+          time.
+        </p> 
       </div>
     </div>
   );
