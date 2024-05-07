@@ -1,3 +1,5 @@
+import CourseTab from "../CourseTab/CourseTab";
+
 const PopularCourse = () => {
   return (
     <div className="container mx-auto pt-[154px]">
@@ -13,6 +15,7 @@ const PopularCourse = () => {
           time.
         </p>
       </div>
+      <CourseTab />
     </div>
   );
 };
