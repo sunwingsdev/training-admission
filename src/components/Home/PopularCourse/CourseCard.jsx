@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "../shared/Modal/Modal";
+import Modal from "../../shared/Modal";
 import AdmissionForm from "../AdmissionForm/AdmissionForm";
 
 const CourseCard = ({ course }) => {
@@ -39,7 +39,7 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <AdmissionForm />
+        <AdmissionForm closeModal={closeModal} />
       </Modal>
     </>
   );

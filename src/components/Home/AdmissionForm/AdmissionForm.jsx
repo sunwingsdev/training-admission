@@ -1,14 +1,40 @@
 import { useForm } from "react-hook-form";
+import { useAddAdmissionMutation } from "../../../redux/features/allApis/admissionApi/admissionApi";
+import { useToasts } from "react-toast-notifications";
+import { useState } from "react";
+import { TbFidgetSpinner } from "react-icons/tb";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import { IoMdDoneAll } from "react-icons/io";
 
-const AdmissionForm = () => {
+const AdmissionForm = ({ closeModal }) => {
+  const [loading, setLoading] = useState(false);
+  const [addMission] = useAddAdmissionMutation();
+  const { addToast } = useToasts();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    setLoading(true);
+    try {
+      const result = await addMission(data);
+      if (result.data.insertedId) {
+        addToast("Form submitted successfully", {
+          appearance: "success",
+          autoDismiss: true,
+        });
+        closeModal();
+        setLoading(false);
+      }
+      console.log(result);
+    } catch (error) {
+      addToast(error.message, {
+        appearance: "error",
+        autoDismiss: true,
+      });
+    }
   };
 
   return (
@@ -114,10 +140,19 @@ const AdmissionForm = () => {
         </div>
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            // className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Submit
+            {loading ? (
+              <PrimaryButton
+                text={"Submitting..."}
+                arrow={false}
+                icon={TbFidgetSpinner}
+                spin={true}
+              />
+            ) : (
+              <PrimaryButton text={"Submit"} arrow={false} icon={IoMdDoneAll} />
+            )}
           </button>
         </div>
       </form>
