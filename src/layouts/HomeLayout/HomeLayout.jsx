@@ -4,7 +4,7 @@ import NavbarTop from "../../components/Home/NavbarTop/NavbarTop";
 
 const HomeLayout = () => {
   return (
-    <div>
+    <div className="relative">
       <NavbarTop />
       <Navbar />
       <Outlet />

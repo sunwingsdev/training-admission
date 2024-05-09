@@ -1,3 +1,5 @@
+import CourseTab from "../CourseTab/CourseTab";
+
 const PopularCourse = () => {
   return (
     <div className="container mx-auto pt-[154px]">
@@ -11,8 +13,9 @@ const PopularCourse = () => {
           program will ensure your desired job in the global market. From the
           list below you can enroll to any online or offline courses at any
           time.
-        </p> 
+        </p>
       </div>
+      <CourseTab />
     </div>
   );
 };
