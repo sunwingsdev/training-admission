@@ -123,7 +123,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="container mx-auto absolute -bottom-[100px] left-1/2 transform -translate-x-1/2">
+    <div className="container mx-auto absolute -bottom-[90px] left-1/2 transform -translate-x-1/2">
       <div className="slider-container">
         <Slider {...settings}>
           {slideList?.map((item, i) => (
