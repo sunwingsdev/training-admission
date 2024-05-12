@@ -213,7 +213,7 @@ const Register = () => {
                 className="mt-2 max-w-xs rounded-lg shadow-md"
               />
             ) : (
-              <div className="border border-dashed border-gray-400 rounded p-4">
+              <div className="border-2 border-dashed border-gray-400 rounded p-4">
                 <label
                   htmlFor="profilePicture"
                   className="flex flex-col items-center cursor-pointer"
