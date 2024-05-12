@@ -3,6 +3,7 @@ import HomeLayout from "../layouts/HomeLayout/HomeLayout";
 import Home from "../pages/Home/Home/Home";
 import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
 import AdmissionStudent from "../pages/Dashboard/AdmissionStudent/AdmissionStudent";
+import Register from "../pages/Home/register/Register";
 
 const Router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const Router = createBrowserRouter([
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [{ path: "admission-student", element: <AdmissionStudent /> }],
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 export default Router;
