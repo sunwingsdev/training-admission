@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-[#403532] text-white py-12">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
         <div className="mb-8 lg:mb-0">
           <h2 className="text-3xl font-semibold">
-            SunWings <br /> Training Centre
+            Sunwings <br /> Training Centre
           </h2>
           <p className="mt-2">A short description of the company.</p>
         </div>

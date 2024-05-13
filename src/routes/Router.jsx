@@ -6,12 +6,22 @@ import AdmissionStudent from "../pages/Dashboard/AdmissionStudent/AdmissionStude
 import Register from "../pages/Home/register/Register";
 import Login from "../pages/Home/login/Login";
 import PrivateRoute from "./PrivateRoute";
+import AboutUs from "../pages/Home/AboutUs/AboutUs";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+    ],
   },
   {
     path: "/dashboard",
