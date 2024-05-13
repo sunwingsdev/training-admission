@@ -4,6 +4,7 @@ import { AuthContext } from "../../../providers/AuthProviders";
 import { imageUpload } from "../../../apis/api";
 import { useAddUserMutation } from "../../../redux/features/allApis/usersApi/UsersApi";
 import { useToasts } from "react-toast-notifications";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const {
@@ -26,8 +27,6 @@ const Register = () => {
   const password = watch("password", "");
 
   const onSubmit = async (data) => {
-    console.log(data);
-
     try {
       setLoading(true);
       const imageData = await imageUpload(profilePicture);
@@ -250,6 +249,14 @@ const Register = () => {
             {loading ? "Signing up" : "Sign up"}
           </button>
         </form>
+        <div className="mt-4 text-center">
+          <p>
+            Already have an account?{" "}
+            <Link to="/login" className="text-blue-500 hover:underline">
+              Login here
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );

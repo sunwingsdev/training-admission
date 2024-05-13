@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home/Home";
 import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
 import AdmissionStudent from "../pages/Dashboard/AdmissionStudent/AdmissionStudent";
 import Register from "../pages/Home/register/Register";
+import Login from "../pages/Home/login/Login";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -13,12 +15,25 @@ const Router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
-    children: [{ path: "admission-student", element: <AdmissionStudent /> }],
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "admission-student",
+        element: <AdmissionStudent />,
+      },
+    ],
   },
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 export default Router;
