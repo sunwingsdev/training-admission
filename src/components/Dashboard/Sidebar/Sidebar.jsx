@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProviders";
+import { useToasts } from "react-toast-notifications";
 
 const Sidebar = () => {
+  const { logOut } = useContext(AuthContext);
+  const { addToast } = useToasts();
   const [collapsed, setCollapsed] = useState({
     admission: true,
     branch: true,
@@ -22,16 +26,24 @@ const Sidebar = () => {
     });
   };
 
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      addToast("Logged out successfully", {
+        appearance: "success",
+        autoDismiss: true,
+      });
+    } catch (error) {
+      addToast(error.message, {
+        appearance: "error",
+        autoDismiss: true,
+      });
+    }
+  };
+
   return (
     <div>
       <div className="">
-        <Link to="/">
-          {/* <div className="p-4 text-center">
-            <h2 className="text-4xl font-black text-white shadow-2xl cursor-pointer">
-              <span className="text-[#f40027]">K</span>FC
-            </h2>
-          </div> */}
-        </Link>
         <ul className="flex gap-2 flex-col p-4 text text-base">
           <li className=" text-white cursor-pointer">
             <div
@@ -53,22 +65,13 @@ const Sidebar = () => {
                   Admission Student List
                 </li>
               </Link>
-              <Link to="/dashboard/add-subcategory">
-                <li className="bg-green-500 hover:bg-green-600 mb-2 py-2 px-4 w-full">
-                  Add Subcategory
-                </li>
-              </Link>
-              <Link to="/dashboard/add-item">
-                <li className="bg-green-500 hover:bg-green-600 py-2 px-4 mb-2 w-full">
-                  Add Item
-                </li>
-              </Link>
-              <Link to={"/dashboard/all-items"}>
-                <li className="bg-green-500 hover:bg-green-600 py-2 px-4 w-full">
-                  All Items
-                </li>
-              </Link>
             </ul>
+          </li>
+          <li
+            onClick={handleLogout}
+            className="text-white cursor-pointer bg-green-600 hover:bg-green-700  duration-300 py-2 px-4 flex gap-2 items-center lg:text-lg"
+          >
+            Logout
           </li>
         </ul>
       </div>
