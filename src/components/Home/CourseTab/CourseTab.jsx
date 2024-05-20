@@ -19,7 +19,8 @@ export default function CourseTab() {
       image:
         "https://www.creativeitinstitute.com/images/course/course_1663052056.jpg",
       courseName: "Visa Processing Course",
-      price: 18000,
+      onlinePrice: 10000,
+      offlinePrice: 18000,
       module: ["visa processing", "visa consultant"],
       duration: "2 Months",
       classSchedule: "Saturday and Friday",
@@ -31,7 +32,8 @@ export default function CourseTab() {
       image:
         "https://www.creativeitinstitute.com/images/course/course_1663052056.jpg",
       courseName: "Air Ticketing Course",
-      price: 16000,
+      onlinePrice: 9000,
+      offlinePrice: 16000,
       module: ["Buy Ticket", "ticket issue"],
       duration: "2 Months",
       classSchedule: "Saturday and Friday",
@@ -43,7 +45,8 @@ export default function CourseTab() {
       image:
         "https://www.creativeitinstitute.com/images/course/course_1663052056.jpg",
       courseName: "Travel Business Course",
-      price: 40000,
+      onlinePrice: 15000,
+      offlinePrice: 40000,
       module: ["travel agency business", "business license"],
       duration: "2 Months",
       classSchedule: "Saturday and Friday",
