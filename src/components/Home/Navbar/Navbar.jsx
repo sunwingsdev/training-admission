@@ -1,7 +1,7 @@
 import { IoBookOutline } from "react-icons/io5";
 import logo from "../../../assets/logo/logo.jpg";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="sticky top-0 bg-white z-20">
@@ -50,13 +50,15 @@ const Navbar = () => {
               <li>Contact</li>
             </NavLink>
           </ul>
-          <PrimaryButton
-            icon={IoBookOutline}
-            text={"Browse Course"}
-            arrow={true}
-          >
-            Browse
-          </PrimaryButton>
+          <Link to={"/courses"}>
+            <PrimaryButton
+              icon={IoBookOutline}
+              text={"Browse Course"}
+              arrow={true}
+            >
+              Browse
+            </PrimaryButton>
+          </Link>
         </div>
       </div>
     </div>
