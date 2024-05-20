@@ -44,7 +44,7 @@ const Footer = () => {
       <div className="border-t border-gray-700 mt-8 pt-8">
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} SunWings Training Centre. All
+            &copy; {new Date().getFullYear()} Sunwings Training Centre. All
             rights reserved.
           </p>
         </div>

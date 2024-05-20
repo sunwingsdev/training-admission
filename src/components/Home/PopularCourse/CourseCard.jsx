@@ -26,7 +26,10 @@ const CourseCard = ({ course }) => {
           </div>
           <div className="flex flex-row items-center justify-between py-2">
             <p className="text-[#434242] font-bold">
-              Course fee {course?.price} BDT
+              Online: {course?.onlinePrice} BDT
+            </p>
+            <p className="text-[#434242] font-bold">
+              Offline: {course?.offlinePrice} BDT
             </p>
             <button
               onClick={openModal}
