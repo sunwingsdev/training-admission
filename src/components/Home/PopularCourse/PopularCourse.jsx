@@ -2,7 +2,7 @@ import CourseTab from "../CourseTab/CourseTab";
 
 const PopularCourse = () => {
   return (
-    <div className="container mx-auto pt-[154px]">
+    <div className="container mx-auto pt-[254px]">
       <div>
         <h2 className="text-[#1f1e1e] text-[44px] text-center font-bold">
           Popular Courses
