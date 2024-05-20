@@ -12,3 +12,6 @@
   background: url(./assets/banner/banner_bg.png);
   object-fit: cover;
 }
+.container{
+  padding: 0 15px;
+}

@@ -87,7 +87,7 @@ export default function CourseTab() {
           ))} */}
         </Tab.List>
         {
-          <Tab.Panels className="mt-2 flex flex-row container mx-auto gap-4 py-10">
+          <Tab.Panels className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-10 md:gap-6 py-10">
             {courseList &&
               courseList?.map((course) => (
                 <CourseCard key={course?._id} course={course} />
