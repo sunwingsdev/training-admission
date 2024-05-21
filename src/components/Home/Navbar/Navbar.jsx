@@ -57,9 +57,12 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
-            <Link to="/dashboard">
+            <NavLink
+              className={`hover:border-b-2 hover:border-[#ff1e1e]`}
+              to="/dashboard"
+            >
               <li>Dashboard</li>
-            </Link>
+            </NavLink>
           </ul>
           <Link to="/courses">
             <PrimaryButton
@@ -134,9 +137,12 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
-            <Link to="/dashboard">
+            <NavLink
+              className={`hover:border-b-2 hover:border-[#ff1e1e] `}
+              to="/dashboard"
+            >
               <li>Dashboard</li>
-            </Link>
+            </NavLink>
           </ul>
           <Link to="/courses" onClick={toggleMenu}>
             <PrimaryButton
