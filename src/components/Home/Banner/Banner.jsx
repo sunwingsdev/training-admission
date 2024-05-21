@@ -5,18 +5,19 @@ import { FaCirclePlay } from "react-icons/fa6";
 import bannerImg from "../../../assets/banner/banner.jpg";
 import isoImg from "../../../assets/banner/iso.png";
 import BannerSlider from "../BannerSlider/BannerSlider";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
     <div className="bannerBg pt-14 pb-52 relative">
-      <div className="container mx-auto flex flex-row items-center justify-center gap-4">
-        <div className="w-1/2">
+      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-16 lg:gap-4">
+        <div className="lg:w-1/2">
           <div className="flex flex-row gap-1 items-center justify-start">
             <BsBookmarkCheckFill size={25} className="text-[#ff1e1e]" />
             <p className="text-[17px] font-semibold">Unleash Your Potential</p>
           </div>
           <h2 className="text-[43px] font-bold">
-            Become an IT Pro & <br /> Rule the <br />
+            Become an IT Pro & Rule the <br />
             <span className="gradientTextBg">Digital World</span>
           </h2>
           <p className="text-[#212529] py-4">
@@ -26,14 +27,16 @@ const Banner = () => {
             trendy options.
           </p>
           <div className="flex flex-row items-center justify-start gap-3">
-            <PrimaryButton
-              icon={IoBookOutline}
-              text={"Browse Course"}
-              arrow={false}
-              hover={true}
-            >
-              Browse
-            </PrimaryButton>
+            <Link to={"/courses"}>
+              <PrimaryButton
+                icon={IoBookOutline}
+                text={"Browse Course"}
+                arrow={false}
+                hover={true}
+              >
+                Browse
+              </PrimaryButton>
+            </Link>
             <PrimaryButton
               icon={IoBookOutline}
               text={"Join Free Seminar"}
@@ -51,7 +54,7 @@ const Banner = () => {
             </p>
           </div>
         </div>
-        <div className="relative w-1/2">
+        <div className="relative lg:w-1/2">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-8">
             <FaCirclePlay
               // onClick={() => handleVideo(showLiveTv?.[0])}
