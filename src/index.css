@@ -12,6 +12,11 @@
   background: url(./assets/banner/banner_bg.png);
   object-fit: cover;
 }
-.container{
+.container {
   padding: 0 15px;
+}
+/* Example CSS to apply background color to the table heading row */
+th {
+  background-color: #4a90e2; /* Change the color to your desired background color */
+  color: white; /* Optional: Change the text color */
 }

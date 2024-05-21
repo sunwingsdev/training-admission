@@ -127,7 +127,7 @@ const BannerSlider = () => {
         settings: {
           slidesToShow: 3,
         },
-      },gitn 
+      },
       {
         breakpoint: 576,
         settings: {

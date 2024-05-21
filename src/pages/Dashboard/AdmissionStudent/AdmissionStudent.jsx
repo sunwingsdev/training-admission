@@ -70,7 +70,7 @@ const AdmissionStudent = () => {
   const actionBodyTemplate = (rowData) => {
     return (
       <>
-        <div className="flex">
+        <div className="flex items-center">
           <div
             className="rounded-full p-3 hover:bg-green-100 cursor-pointer"
             // onClick={() => handleOpenDeleteModal(rowData._id)}
@@ -110,53 +110,51 @@ const AdmissionStudent = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-2 bg-gray-100 text-gray-800">
-      <div className="overflow-x-auto">
-        <DataTable
-          value={data}
-          paginator
-          rows={5}
-          rowsPerPageOptions={[5, 10, 25]}
-          className="w-full bg-white shadow-md rounded-lg"
-          paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
-          currentPageReportTemplate="{first} to {last} of {totalRecords}"
-          headerClassName="bg-blue-200"
-        >
-          <Column field="name" header="Name" bodyStyle={{ padding: "10px" }} />
-          <Column
-            field="phone"
-            header="Phone"
-            bodyStyle={{ padding: "10px" }}
-          />
-          <Column
-            field="profession"
-            header="Profession"
-            bodyStyle={{ padding: "10px" }}
-          />
-          <Column
-            field="location"
-            header="Location"
-            bodyStyle={{ padding: "10px" }}
-          />
-          <Column
-            field="createdAt"
-            header="Time"
-            style={{ width: "20%" }}
-            bodyStyle={{ padding: "10px" }}
-            body={timeBody}
-          />
-          <Column
-            field="course"
-            header="Course"
-            bodyStyle={{ padding: "10px" }}
-          />
-          <Column
-            header=""
-            bodyStyle={{ padding: "10px" }}
-            body={actionBodyTemplate}
-          />
-        </DataTable>
-      </div>
+    <div className="px-2 lg:px-6 bg-gray-100 text-gray-800 lg:mt-12 overflow-x-auto">
+      <DataTable
+        value={data}
+        paginator
+        rows={5}
+        rowsPerPageOptions={[5, 10, 25]}
+        className="w-full bg-white shadow-md rounded-lg"
+        paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+        currentPageReportTemplate="{first} to {last} of {totalRecords}"
+      >
+        <Column field="name" header="Name" bodyStyle={{ padding: "10px" }} />
+        <Column field="phone" header="Phone" bodyStyle={{ padding: "10px" }} />
+        <Column
+          field="profession"
+          header="Profession"
+          bodyStyle={{ padding: "10px" }}
+        />
+        <Column
+          field="location"
+          header="Location"
+          bodyStyle={{ padding: "10px" }}
+        />
+        <Column
+          field="createdAt"
+          header="Time"
+          style={{ width: "20%" }}
+          bodyStyle={{ padding: "10px" }}
+          body={timeBody}
+        />
+        <Column
+          field="course"
+          header="Course"
+          bodyStyle={{ padding: "10px" }}
+        />
+        <Column
+          field="schedule"
+          header="Schedule"
+          bodyStyle={{ padding: "10px" }}
+        />
+        <Column
+          header=""
+          bodyStyle={{ padding: "10px" }}
+          body={actionBodyTemplate}
+        />
+      </DataTable>
     </div>
   );
 };
