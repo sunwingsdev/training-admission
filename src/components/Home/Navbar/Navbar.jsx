@@ -57,15 +57,16 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
+            <Link to="/dashboard">
+              <li>Dashboard</li>
+            </Link>
           </ul>
           <Link to="/courses">
             <PrimaryButton
               icon={IoBookOutline}
               text="Browse Course"
               arrow={true}
-            >
-              Browse
-            </PrimaryButton>
+            ></PrimaryButton>
           </Link>
         </div>
         <div className="md:hidden flex items-center">
@@ -133,15 +134,16 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
+            <Link to="/dashboard">
+              <li>Dashboard</li>
+            </Link>
           </ul>
           <Link to="/courses" onClick={toggleMenu}>
             <PrimaryButton
               icon={IoBookOutline}
               text="Browse Course"
               arrow={true}
-            >
-              Browse
-            </PrimaryButton>
+            ></PrimaryButton>
           </Link>
         </div>
       </div>
