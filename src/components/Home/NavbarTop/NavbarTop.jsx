@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 
 const NavbarTop = () => {
   return (
-    <div className="text-white gradientBg py-3">
+    <div className="text-white gradientBg py-3 px-4">
       <div className="container mx-auto flex gap-2 flex-wrap flex-row lg:justify-between justify-center items-center text-sm">
         <div className="flex flex-row justify-center items-center gap-12">
           <div className="flex flex-row gap-2 justify-center items-center">
