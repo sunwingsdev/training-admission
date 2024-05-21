@@ -5,6 +5,7 @@ import { FaCirclePlay } from "react-icons/fa6";
 import bannerImg from "../../../assets/banner/banner.jpg";
 import isoImg from "../../../assets/banner/iso.png";
 import BannerSlider from "../BannerSlider/BannerSlider";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -26,14 +27,16 @@ const Banner = () => {
             trendy options.
           </p>
           <div className="flex flex-row items-center justify-start gap-3">
-            <PrimaryButton
-              icon={IoBookOutline}
-              text={"Browse Course"}
-              arrow={false}
-              hover={true}
-            >
-              Browse
-            </PrimaryButton>
+            <Link to={"/courses"}>
+              <PrimaryButton
+                icon={IoBookOutline}
+                text={"Browse Course"}
+                arrow={false}
+                hover={true}
+              >
+                Browse
+              </PrimaryButton>
+            </Link>
             <PrimaryButton
               icon={IoBookOutline}
               text={"Join Free Seminar"}

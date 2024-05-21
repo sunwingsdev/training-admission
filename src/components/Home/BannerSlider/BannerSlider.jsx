@@ -10,13 +10,13 @@ const PrevArrow = (props) => {
 
   return (
     <GrPrevious
-      className={className}
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 lg:-left-10 md:-left-8 sm:-left-6 -left-4`}
       style={{
         ...style,
         padding: "3px",
-        display: "block",
-        width: "25px",
-        height: "25px",
+        width: "35px",
+        height: "35px",
+        zIndex: 10,
         background: "white",
         color: isHovered ? "white" : "rgba(0, 0, 0, 0.3)",
         border: "1px solid #ff1e1e",
@@ -37,13 +37,13 @@ const NextArrow = (props) => {
 
   return (
     <GrNext
-      className={className}
+      className={`${className} absolute top-1/2 transform -translate-y-1/2 lg:-right-10 md:-right-8 sm:-right-6 -right-4`}
       style={{
         ...style,
         padding: "3px",
-        display: "block",
-        width: "25px",
-        height: "25px",
+        width: "35px",
+        height: "35px",
+        zIndex: 10,
         background: "white",
         color: isHovered ? "white" : "rgba(0, 0, 0, 0.3)",
         border: "1px solid #ff1e1e",
@@ -115,23 +115,42 @@ const BannerSlider = () => {
     initialSlide: 0,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    },
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },gitn 
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="container mx-auto absolute -bottom-[90px] left-1/2 transform -translate-x-1/2">
-      <div className="slider-container">
+    <div className="container mx-auto w-full absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+      <div className="slider-container w-full px-4 relative">
         <Slider {...settings}>
-          {slideList?.map((item, i) => (
+          {slideList.map((item, i) => (
             <div key={i} className="slide-item">
-              <div className="flex flex-col bg-white p-[15px] rounded-2xl w-[140px] h-[150px] shadow-md items-center justify-center mx-6 my-3">
-                <img className="mx-auto w-[32px]" src={item.image} alt="" />
+              <div className="flex flex-col bg-white p-[15px] rounded-2xl w-[135px] h-[150px] shadow-md items-center justify-center mx-6 my-3">
+                <img
+                  className="mx-auto w-[32px]"
+                  src={item.image}
+                  alt={item.title}
+                />
                 <h3 className="text-center pt-[16px] text-[#1f1e1e] text-[18px] font-semibold">
-                  {item?.title}
+                  {item.title}
                 </h3>
               </div>
             </div>

@@ -8,6 +8,7 @@ import Login from "../pages/Home/login/Login";
 import PrivateRoute from "./PrivateRoute";
 import AboutUs from "../pages/Home/AboutUs/AboutUs";
 import Contact from "../pages/Home/Contact/Contact";
+import PopularCourse from "../components/Home/PopularCourse/PopularCourse";
 
 const Router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const Router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/courses",
+        element: <PopularCourse />,
       },
     ],
   },
