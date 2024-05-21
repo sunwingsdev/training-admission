@@ -21,7 +21,7 @@ const Contact = () => {
         course and training. You can also reach us through the hotline number or
         messenger.
       </p>
-      <div className="flex justify-center gap-12">
+      <div className="flex flex-col lg:flex-row justify-center text-center lg:text-start gap-12">
         <div className="">
           <h3 className="text-[#ff1e1e] text-[22px] font-bold pb-[3px] leading-[33px]">
             Head Office [Main Campus, Dhaka]
@@ -32,7 +32,7 @@ const Contact = () => {
             Dhaka 1216, Bangladesh
           </p>
         </div>
-        <div className="flex justify-start items-start gap-8">
+        <div className="flex justify-start m-auto lg:m-0 items-start gap-8">
           <div className="">
             <h3 className="text-[#1f1e1e] text-[22px] leading-[33px] pb-[3px] font-bold">
               Phone Number

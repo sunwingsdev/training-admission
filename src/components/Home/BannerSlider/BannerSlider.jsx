@@ -127,7 +127,11 @@ const BannerSlider = () => {
         settings: {
           slidesToShow: 3,
         },
+<<<<<<< HEAD
       },
+=======
+      }, 
+>>>>>>> 861be0802a6ed8c6d587499394c74909367370a4
       {
         breakpoint: 576,
         settings: {
@@ -138,7 +142,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="container mx-auto w-full absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+    <div className="container mx-auto px-2 md:px-4 lg:px-8 w-full absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
       <div className="slider-container w-full px-4 relative">
         <Slider {...settings}>
           {slideList.map((item, i) => (

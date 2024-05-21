@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-[#403532] text-white py-12">
+    <footer className="bg-[#403532] text-white py-12 px-4">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
         <div className="mb-8 lg:mb-0">
           <h2 className="text-3xl font-semibold">
@@ -33,7 +33,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your email address"
-              className="bg-gray-800 text-white border border-gray-700 py-2 px-4 rounded-md mb-2 lg:mr-2"
+              className="bg-gray-800 text-white border border-gray-700 py-2 px-4 rounded-md lg:mb-0 mb-2 lg:mr-2"
             />
             <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">
               Subscribe

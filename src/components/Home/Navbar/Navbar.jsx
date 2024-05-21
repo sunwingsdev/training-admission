@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white z-20">
+    <div className="sticky top-0 bg-white z-20 px-4">
       <div className="flex items-center justify-between container mx-auto py-2">
         <img className="w-20" src={logo} alt="Logo" />
         <div className="hidden md:flex flex-row gap-8">

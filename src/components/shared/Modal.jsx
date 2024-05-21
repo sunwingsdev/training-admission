@@ -32,8 +32,8 @@ const Modal = ({ isOpen, closeModal, children }) => {
               <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden bg-white p-6 text-left align-middle shadow-xl transition-all">
                 {children}
                 <RxCross1
-                  size={25}
-                  className="absolute top-0 right-0 text-slate-500 cursor-pointer hover:text-red-600 "
+                  size={40}
+                  className="absolute top-0 right-0 cursor-pointer hover:bg-red-600 bg-red-400 text-white p-2"
                   onClick={closeModal}
                 />
               </Dialog.Panel>

@@ -42,8 +42,8 @@ const AboutUs = () => {
           the best interest.
         </p>
       </div>
-      <div className="flex items-center justify-center gap-3 py-8">
-        <div className="w-1/2">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-3 gap-14 py-8">
+        <div className="lg:w-1/2 w-full">
           <p className="text-[18px] font-bold text-[#fb312e]">
             Successfully 15 Year&apos;s
           </p>
@@ -61,12 +61,12 @@ const AboutUs = () => {
           <PrimaryButton text={"Browse Course"} />
         </div>
         <img
-          className="w-1/2 rounded-[24px]"
+          className="lg:w-1/2 w-full rounded-[24px]"
           src="https://www.creativeitinstitute.com/images/featured/02_default.jpg"
           alt=""
         />
       </div>
-      <div className="flex gap-5 items-center justify-center pb-9">
+      <div className="flex flex-wrap gap-5 items-center justify-center pb-9">
         {contentList?.map(({ number, label }) => (
           <div
             className="flex flex-col items-center justify-center px-[30px] py-[15px] bg-[#faf9fd]"
