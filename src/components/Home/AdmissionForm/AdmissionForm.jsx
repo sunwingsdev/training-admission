@@ -38,7 +38,7 @@ const AdmissionForm = ({ closeModal }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="mx-auto">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
