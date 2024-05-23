@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import AboutUs from "../pages/Home/AboutUs/AboutUs";
 import Contact from "../pages/Home/Contact/Contact";
 import PopularCourse from "../components/Home/PopularCourse/PopularCourse";
+import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
 
 const Router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const Router = createBrowserRouter([
       {
         path: "admission-student",
         element: <AdmissionStudent />,
+      },
+      {
+        path: "add-course",
+        element: <AddCourse />,
       },
     ],
   },
