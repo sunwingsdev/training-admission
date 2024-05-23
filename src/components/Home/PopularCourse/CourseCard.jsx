@@ -24,7 +24,7 @@ const CourseCard = ({ course }) => {
             <p>680 Review</p>
             <p>850 Students</p>
           </div>
-          <div className="flex flex-row items-center justify-between py-2">
+          <div className="flex flex-row items-center justify-between py-2 xl:text-base md:text-sm text-xs">
             <p className="text-[#434242] font-bold">
               Online: {course?.onlinePrice} BDT
             </p>

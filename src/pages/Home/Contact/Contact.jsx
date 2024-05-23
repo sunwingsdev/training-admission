@@ -52,7 +52,7 @@ const Contact = () => {
             Dhaka 1216, Bangladesh
           </p>
         </div>
-        <div className="flex justify-start m-auto lg:m-0 items-start gap-8">
+        <div className="flex flex-col sm:flex-row items-center justify-start m-auto lg:m-0 sm:items-start gap-8">
           <div className="">
             <h3 className="text-[#1f1e1e] text-[22px] leading-[33px] pb-[3px] font-bold">
               Phone Number

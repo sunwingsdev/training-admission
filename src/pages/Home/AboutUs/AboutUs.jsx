@@ -1,4 +1,3 @@
-
 import PrimaryButton from "../../../components/Home/PrimaryButton/PrimaryButton";
 
 const AboutUs = () => {
@@ -82,7 +81,6 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
-     
     </div>
   );
 };

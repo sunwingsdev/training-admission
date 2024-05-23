@@ -10,6 +10,7 @@ import AboutUs from "../pages/Home/AboutUs/AboutUs";
 import Contact from "../pages/Home/Contact/Contact";
 import PopularCourse from "../components/Home/PopularCourse/PopularCourse";
 import AddCourse from "../pages/Dashboard/AddCourse/AddCourse";
+import AdmissionDetails from "../components/Dashboard/Sidebar/AdmissionDetails/AdmissionDetails";
 
 const Router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const Router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/admissionDetails",
+    element: <AdmissionDetails />,
   },
 ]);
 export default Router;
