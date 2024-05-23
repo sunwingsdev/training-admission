@@ -57,15 +57,19 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
+            <NavLink
+              className={`hover:border-b-2 hover:border-[#ff1e1e]`}
+              to="/dashboard"
+            >
+              <li>Dashboard</li>
+            </NavLink>
           </ul>
           <Link to="/courses">
             <PrimaryButton
               icon={IoBookOutline}
               text="Browse Course"
               arrow={true}
-            >
-              Browse
-            </PrimaryButton>
+            ></PrimaryButton>
           </Link>
         </div>
         <div className="md:hidden flex items-center">
@@ -133,15 +137,19 @@ const Navbar = () => {
             >
               <li>Contact</li>
             </NavLink>
+            <NavLink
+              className={`hover:border-b-2 hover:border-[#ff1e1e] `}
+              to="/dashboard"
+            >
+              <li>Dashboard</li>
+            </NavLink>
           </ul>
           <Link to="/courses" onClick={toggleMenu}>
             <PrimaryButton
               icon={IoBookOutline}
               text="Browse Course"
               arrow={true}
-            >
-              Browse
-            </PrimaryButton>
+            ></PrimaryButton>
           </Link>
         </div>
       </div>

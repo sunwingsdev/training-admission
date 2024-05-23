@@ -16,9 +16,18 @@ const AdmissionStudent = () => {
   const { data, isLoading } = useGetStudentsQuery();
   const [deleteSingleStudent] = useDeleteSingleStudentMutation();
   const [id, setId] = useState("");
+  const [rowData, setRowData] = useState(null);
+  const [isOpenViewModal, setIsOpenViewModal] = useState(false);
   const [isOpenDeleteModal, setIsOpenDeleteModal] = useState(false);
   const { addToast } = useToasts();
 
+  const handleOpenViewModal = (rowData) => {
+    setIsOpenViewModal(true);
+    setRowData(rowData);
+  };
+  const closeViewModal = () => {
+    setIsOpenViewModal(false);
+  };
   const handleOpenDeleteModal = (id) => {
     setIsOpenDeleteModal(true);
     setId(id);
@@ -50,12 +59,6 @@ const AdmissionStudent = () => {
     }
   };
 
-  // Function to handle the view action
-  const handleView = (id) => {
-    // Implement view functionality here
-    console.log("View", id);
-  };
-
   const timeBody = (rowData) => {
     return (
       <>
@@ -73,7 +76,7 @@ const AdmissionStudent = () => {
         <div className="flex items-center">
           <div
             className="rounded-full p-3 hover:bg-green-100 cursor-pointer"
-            // onClick={() => handleOpenDeleteModal(rowData._id)}
+            onClick={() => handleOpenViewModal(rowData)}
           >
             <FaEye size={25} className="text-green-500" />
           </div>
@@ -104,6 +107,9 @@ const AdmissionStudent = () => {
               </button>
             </div>
           </div>
+        </Modal>
+        <Modal isOpen={isOpenViewModal} closeModal={closeViewModal}>
+          <div className="">hi</div>
         </Modal>
       </>
     );
