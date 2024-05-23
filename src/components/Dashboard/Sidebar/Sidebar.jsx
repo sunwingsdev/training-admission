@@ -95,6 +95,11 @@ const Sidebar = () => {
                       Admission Student List
                     </li>
                   </Link>
+                  <Link to="/dashboard/add-course">
+                    <li className="bg-green-500 hover:bg-green-600 mb-2 py-2 px-4 w-full">
+                      Add Course
+                    </li>
+                  </Link>
                 </ul>
               </li>
               <li
@@ -127,6 +132,11 @@ const Sidebar = () => {
               <Link to="/dashboard/admission-student">
                 <li className="bg-green-500 hover:bg-green-600 mb-2 py-2 px-4 w-full">
                   Admission Student List
+                </li>
+              </Link>
+              <Link to="/dashboard/add-course">
+                <li className="bg-green-500 hover:bg-green-600 mb-2 py-2 px-4 w-full">
+                  Add Course
                 </li>
               </Link>
             </ul>

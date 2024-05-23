@@ -1,13 +1,33 @@
 import { useForm } from "react-hook-form";
 import PrimaryButton from "../../../components/Home/PrimaryButton/PrimaryButton";
+import { useAddQueryMutation } from "../../../redux/features/allApis/queriesApi/queriesApi";
+import { useToasts } from "react-toast-notifications";
+import { useState } from "react";
 
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [addQuery] = useAddQueryMutation();
+  const { addToast } = useToasts();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // Handle form submission here
-    console.log(data);
-    // Reset form after submission
+    setLoading(true);
+    try {
+      const result = await addQuery(data);
+      if (result.data.success === true) {
+        addToast("Your message has been sent", {
+          appearance: "success",
+          autoDismiss: true,
+        });
+        setLoading(false);
+      }
+    } catch (error) {
+      addToast(error.message, {
+        appearance: "error",
+        autoDismiss: true,
+      });
+    }
     reset();
   };
 
@@ -63,7 +83,7 @@ const Contact = () => {
           <div className="mb-4">
             <input
               type="text"
-              {...register("name")}
+              {...register("name", { required: true })}
               placeholder="Name"
               className="border-2 border-gray-400 w-full py-2 px-3 rounded-lg focus:outline-none focus:border-blue-500"
             />
@@ -71,7 +91,7 @@ const Contact = () => {
           <div className="mb-4">
             <input
               type="email"
-              {...register("email")}
+              {...register("email", { required: true })}
               placeholder="Email"
               className="border-2 border-gray-400 w-full py-2 px-3 rounded-lg focus:outline-none focus:border-blue-500"
             />
@@ -79,14 +99,22 @@ const Contact = () => {
           <div className="mb-4">
             <input
               type="tel"
-              {...register("phone")}
+              {...register("phone", { required: true })}
               placeholder="Phone Number"
               className="border-2 border-gray-400 w-full py-2 px-3 rounded-lg focus:outline-none focus:border-blue-500"
             />
           </div>
           <div className="mb-4">
+            <input
+              type="text"
+              {...register("subject", { required: true })}
+              placeholder="Subject"
+              className="border-2 border-gray-400 w-full py-2 px-3 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
             <textarea
-              {...register("details")}
+              {...register("details", { required: true })}
               placeholder="Your Query"
               rows="4"
               className="border-2 border-gray-400 w-full py-2 px-3 rounded-lg focus:outline-none focus:border-blue-500"
@@ -94,7 +122,11 @@ const Contact = () => {
           </div>
           <div className="flex justify-end">
             <button type="submit">
-              <PrimaryButton text={"Submit"} />{" "}
+              {loading ? (
+                <PrimaryButton text={"Submitting"} />
+              ) : (
+                <PrimaryButton text={"Submit"} />
+              )}
             </button>
           </div>
         </form>
