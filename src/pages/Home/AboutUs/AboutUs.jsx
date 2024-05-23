@@ -28,7 +28,7 @@ const AboutUs = () => {
     },
   ];
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <div>
         <h2 className="text-[#cf0000] text-[45px] pb-[29px] font-bold">
           About Us
