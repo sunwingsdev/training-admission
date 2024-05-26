@@ -30,15 +30,15 @@ const Banner = () => {
                 Unleash Your Potential
               </p>
             </div>
-            <h2 className="text-[43px] font-bold">
-              Become an IT Pro & Rule the <br />
-              <span className="gradientTextBg">Digital World</span>
+            <h2 className="text-[37px] font-bold">
+              একজন দক্ষ বিজনেসম্যান হয়ে উঠুন এবং শাসন করুন
+              <span className="gradientTextBg"> ডিজিটাল ওয়ার্ল্ড</span>
             </h2>
             <p className="text-[#212529] py-4">
-              With a vision to turn manpower into assets, Creative IT Institute
-              is ready to enhance your learning experience with skilled mentors
-              and updated curriculum. Pick your desired course from more than 30
-              trendy options.
+              জনশক্তিকে সম্পদে পরিণত করার দৃষ্টিভঙ্গি নিয়ে, সানউইংস ট্রেনিং
+              সেন্টার দক্ষ পরামর্শদাতা এবং আপডেট করা পাঠ্যক্রমের সাথে আপনার
+              শেখার অভিজ্ঞতা বাড়াতে প্রস্তুত। ১০ টিরও বেশি ট্রেন্ডি বিকল্প থেকে
+              আপনার পছন্দসই কোর্সটি বেছে নিন।
             </p>
             <div className="flex flex-row items-center justify-start gap-3">
               <Link to={"/courses"}>

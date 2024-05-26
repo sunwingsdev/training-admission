@@ -11,19 +11,18 @@ import Modal from "../../../components/shared/Modal";
 import { useState } from "react";
 import { useToasts } from "react-toast-notifications";
 import moment from "moment";
+import AdmissionDetails from "../../../components/Dashboard/Sidebar/AdmissionDetails/AdmissionDetails";
 
 const AdmissionStudent = () => {
   const { data, isLoading } = useGetStudentsQuery();
   const [deleteSingleStudent] = useDeleteSingleStudentMutation();
   const [id, setId] = useState("");
-  const [rowData, setRowData] = useState(null);
   const [isOpenViewModal, setIsOpenViewModal] = useState(false);
   const [isOpenDeleteModal, setIsOpenDeleteModal] = useState(false);
   const { addToast } = useToasts();
 
-  const handleOpenViewModal = (rowData) => {
+  const handleOpenViewModal = () => {
     setIsOpenViewModal(true);
-    setRowData(rowData);
   };
   const closeViewModal = () => {
     setIsOpenViewModal(false);
@@ -76,7 +75,7 @@ const AdmissionStudent = () => {
         <div className="flex items-center">
           <div
             className="rounded-full p-3 hover:bg-green-100 cursor-pointer"
-            onClick={() => handleOpenViewModal(rowData)}
+            onClick={handleOpenViewModal}
           >
             <FaEye size={25} className="text-green-500" />
           </div>
@@ -109,7 +108,7 @@ const AdmissionStudent = () => {
           </div>
         </Modal>
         <Modal isOpen={isOpenViewModal} closeModal={closeViewModal}>
-          <div className="">hi</div>
+          <AdmissionDetails rowData={rowData} />
         </Modal>
       </>
     );
