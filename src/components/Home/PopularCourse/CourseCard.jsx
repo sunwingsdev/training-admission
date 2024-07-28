@@ -4,9 +4,11 @@ import AdmissionForm from "../AdmissionForm/AdmissionForm";
 
 const CourseCard = ({ course }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [courseName, setCourseName] = useState("");
 
-  const openModal = () => {
+  const openModal = (course) => {
     setIsOpen(true);
+    setCourseName(course);
   };
   const closeModal = () => {
     setIsOpen(false);
@@ -15,9 +17,9 @@ const CourseCard = ({ course }) => {
   return (
     <>
       <div className="flex flex-col  justify-center bg-white shadow-md rounded-lg">
-        <img className="rounded-t-lg" src={course?.image} alt="" />
+        <img className="rounded-t-lg" src={course?.courseImage} alt="" />
         <div className="p-3">
-          <h2 className="text-[#1f1e1e] text-[20px] font-bold py-3">
+          <h2 className="text-[#1f1e1e] text-[20px] font-bold py-3 capitalize">
             {course?.courseName}
           </h2>
           <div className="flex flex-row items-center justify-between py-2 text-[#787a82] text-[14px]">
@@ -32,7 +34,7 @@ const CourseCard = ({ course }) => {
               Offline: {course?.offlinePrice} BDT
             </p>
             <button
-              onClick={openModal}
+              onClick={() => openModal(course?.courseName)}
               className="border border-[#ff7e31] p-[8px] font-semibold
          rounded-[8px] hover:bg-[#ff7e31] text-[#8c0000] hover:text-white"
             >
@@ -42,7 +44,7 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <AdmissionForm closeModal={closeModal} />
+        <AdmissionForm closeModal={closeModal} course={courseName} />
       </Modal>
     </>
   );

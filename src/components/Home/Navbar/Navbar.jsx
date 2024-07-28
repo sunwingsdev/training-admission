@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoBookOutline, IoMenu, IoClose } from "react-icons/io5";
-import logo from "../../../assets/logo/logo.jpg";
+import logo from "../../../assets/logo/logo.png";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { Link, NavLink } from "react-router-dom";
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             >
               <li>About us</li>
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 `hover:border-b-2 hover:border-[#ff1e1e] ${
                   isActive && "border-b-2 border-[#ff1e1e]"
@@ -46,7 +46,7 @@ const Navbar = () => {
               to="/success-story"
             >
               <li>Success story</li>
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className={({ isActive }) =>
                 `hover:border-b-2 hover:border-[#ff1e1e] ${
@@ -115,7 +115,7 @@ const Navbar = () => {
             >
               <li>About us</li>
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 `hover:border-b-2 hover:border-[#ff1e1e] ${
                   isActive && "border-b-2 border-[#ff1e1e]"
@@ -125,7 +125,7 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               <li>Success story</li>
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className={({ isActive }) =>
                 `hover:border-b-2 hover:border-[#ff1e1e] ${

@@ -6,7 +6,7 @@ import { TbFidgetSpinner } from "react-icons/tb";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { IoMdDoneAll } from "react-icons/io";
 
-const AdmissionForm = ({ closeModal }) => {
+const AdmissionForm = ({ closeModal, course }) => {
   const [loading, setLoading] = useState(false);
   const [addMission] = useAddAdmissionMutation();
   const { addToast } = useToasts();
@@ -125,6 +125,7 @@ const AdmissionForm = ({ closeModal }) => {
             Course
           </label>
           <select
+            defaultValue={course}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="course"
             {...register("course", { required: true })}
@@ -132,9 +133,13 @@ const AdmissionForm = ({ closeModal }) => {
             <option value="" selected disabled>
               Select a course
             </option>
-            <option>Visa Processing Course</option>
-            <option>Air Ticketing Course</option>
-            <option>Travel Business Course</option>
+            <option value="visa processing course">
+              Visa Processing Course
+            </option>
+            <option value="air ticketing course">Air Ticketing Course</option>
+            <option value="travel agency business course">
+              Travel Agency Business Course
+            </option>
           </select>
           {errors.course && (
             <span className="text-red-500">Please select a course</span>
