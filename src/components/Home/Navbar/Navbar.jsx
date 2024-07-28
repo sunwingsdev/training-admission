@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoBookOutline, IoMenu, IoClose } from "react-icons/io5";
-import logo from "../../../assets/logo/logo.jpg";
+import logo from "../../../assets/logo/logo.png";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { Link, NavLink } from "react-router-dom";
 

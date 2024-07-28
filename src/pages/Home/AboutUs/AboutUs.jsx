@@ -31,14 +31,15 @@ const AboutUs = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="text-center">
-        <h2 className="text-[#cf0000] text-4xl pb-7 font-bold">About Us</h2>
+        <h2 className="text-[#cf0000] text-4xl pb-7 font-bold">
+          আমাদের সম্পর্কে
+        </h2>
         <p className="text-[#605f62] pb-14 max-w-2xl mx-auto leading-7">
-          Sunwings Training Centre is an institution where empowering the
-          community with an excellent standard of learning is what we desire. We
-          endeavour for the continuous improvement of our leaders who will work
-          to construct a better future. We will continue to share our knowledge
-          for contributing to the success of individuals and to serve society in
-          the best interest.
+          সানউইংস ট্রেনিং সেন্টার হল এমন একটি প্রতিষ্ঠান যেখানে শিক্ষার একটি
+          চমৎকার মান দিয়ে সম্প্রদায়কে ক্ষমতায়ন করা আমাদের কাম্য। আমরা আমাদের
+          নেতাদের ক্রমাগত উন্নতির জন্য চেষ্টা করি যারা একটি ভাল ভবিষ্যত গঠনে কাজ
+          করবে। আমরা ব্যক্তিদের সাফল্যে অবদান রাখার জন্য এবং সর্বোত্তম স্বার্থে
+          সমাজের সেবা করার জন্য আমাদের জ্ঞান ভাগ করে নেব।
         </p>
       </div>
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-3 gap-14 py-8">
@@ -47,15 +48,15 @@ const AboutUs = () => {
             Successfully 15 Year&apos;s
           </p>
           <h2 className="text-[#1f1e1e] font-bold text-4xl leading-tight mt-2">
-            World-Renowned IT Expert Making Organization
+            World-Renowned Businessman Making Organization
           </h2>
           <p className="text-[#605f62] text-base leading-7 py-6">
-            Sunwings Training Centre has been working with a vision to create IT
-            experts for the past 15 years. In a fast pacing world, where every
-            sector relies on technology, you need to develop IT skills to secure
-            a better future. With the utmost dedication, we have been able to
-            make more than 70,000 IT experts who are currently working in
-            different sectors.
+            সানউইংস ট্রেনিং সেন্টার গত 3 বছর ধরে আইটি বিশেষজ্ঞ তৈরির লক্ষ্য
+            নিয়ে কাজ করছে। একটি দ্রুত গতিশীল বিশ্বে, যেখানে প্রতিটি সেক্টর
+            প্রযুক্তির উপর নির্ভর করে, আপনাকে একটি উন্নত ভবিষ্যত সুরক্ষিত করতে
+            আইটি দক্ষতা বিকাশ করতে হবে। অত্যন্ত নিষ্ঠার সাথে, আমরা 70,000 এরও
+            বেশি আইটি বিশেষজ্ঞ তৈরি করতে সক্ষম হয়েছি যারা বর্তমানে বিভিন্ন
+            সেক্টরে কাজ করছে।
           </p>
           <PrimaryButton text="Browse Course" />
         </div>
